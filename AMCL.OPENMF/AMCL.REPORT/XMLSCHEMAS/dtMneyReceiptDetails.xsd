@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="dtMneyReceiptDetails" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtMneyReceiptDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FUND_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="FUND_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RECEIPT_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RECEIPT_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="RECEIPT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SELLING_AGENT_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SELLING_AGENT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="HNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIT_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PAY_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="ROUTING_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BANK_INFO" type="xs:string" minOccurs="0" />
+              <xs:element name="CASH_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MULTI_PAY_REMARKS" type="xs:string" minOccurs="0" />
+              <xs:element name="RECEIPT_ENTRY_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="RECEIPT_ENTRY_DATE" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

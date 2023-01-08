@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="dtLedgerForReport" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtLedgerForReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SI" type="xs:int" minOccurs="0" />
+              <xs:element name="TRANS_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="TRANS_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="TRANS_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="RATE" type="xs:int" minOccurs="0" />
+              <xs:element name="UNIT_CREDIT" type="xs:int" minOccurs="0" />
+              <xs:element name="UNIT_DEBIT" type="xs:int" minOccurs="0" />
+              <xs:element name="BALANCE" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

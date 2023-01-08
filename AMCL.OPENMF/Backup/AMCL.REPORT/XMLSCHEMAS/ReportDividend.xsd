@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ReportDividend" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportDividend">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FUND_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="FUND_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BR" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BR_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="DIVI_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="F_YEAR" type="xs:string" minOccurs="0" />
+              <xs:element name="CLOSE_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="DIVI_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIN" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_AC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_AC_NO_MICR" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_ROUTING_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_ROUTING_NO_MICR" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_TRANSACTION_CODE" type="xs:int" minOccurs="0" />
+              <xs:element name="ISS_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="HNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="WAR_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="WAR_NO_MICR" type="xs:string" minOccurs="0" />
+              <xs:element name="NO_OF_UNITS" type="xs:int" minOccurs="0" />
+              <xs:element name="TOT_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TAX_DIDUCT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FI_DIVI_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FI_DIVI_QTY_INWORD" type="xs:string" minOccurs="0" />
+              <xs:element name="CIP_QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="CIP_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CIP" type="xs:string" minOccurs="0" />
+              <xs:element name="AGM_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="TAX_RT_INDIVIDUAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TAX_RT_INSTITUTION" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TAX_CAL_TEXT" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="FY_PART" type="xs:string" minOccurs="0" />
+              <xs:element name="NET_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FRAC_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REG_NUM" type="xs:int" minOccurs="0" />
+              <xs:element name="HOLDER_BK_ACC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="HOLDER_BK_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="HOLDER_BK_BR_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="HOLDER_BK_BR_ADDRES" type="xs:string" minOccurs="0" />
+              <xs:element name="SL_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="CIP_CERT" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_AC" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_BK_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_BK_BR_NM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

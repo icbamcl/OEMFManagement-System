@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="UnitHolderStatementAfterClosing" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UnitHolderStatementAfterClosing">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REG_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BR_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="HNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="FMH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="MO_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="OCC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="B_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="SEX" type="xs:string" minOccurs="0" />
+              <xs:element name="MAR_STAT" type="xs:string" minOccurs="0" />
+              <xs:element name="RELIGION" type="xs:string" minOccurs="0" />
+              <xs:element name="EDU_QUA" type="xs:string" minOccurs="0" />
+              <xs:element name="TEL_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="EMAIL" type="xs:string" minOccurs="0" />
+              <xs:element name="CIP" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_FLAG" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_AC" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_INTSTITUTE_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_INTSTITUTE_BRANCH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_FLAG" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_AC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BANK_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_ADDRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="BALANCE" type="xs:int" minOccurs="0" />
+              <xs:element name="BEFTN" type="xs:string" minOccurs="0" />
+              <xs:element name="TIN" type="xs:string" minOccurs="0" />
+              <xs:element name="PASS_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BIRTH_CERT_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="NID" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_FMH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_MO_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_OCC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_TEL_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_FMH_REL" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_CTL_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_FMH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_MO_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_OCC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_NOMI_REL" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_PERCENTAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_FMH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_MO_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_OCC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_NOMI_REL" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_PERCENTAGE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

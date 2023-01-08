@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="dtIntimationLetter" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtIntimationLetter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="F_YEAR" type="xs:string" minOccurs="0" />
+              <xs:element name="FY_PART" type="xs:string" minOccurs="0" />
+              <xs:element name="TAX_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AGM_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ISS_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FUND_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="DIVI_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FY" type="xs:string" minOccurs="0" />
+              <xs:element name="CLOSE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FRAC_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WAR_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REG_BK" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BR" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOT_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIDUCT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FI_DIVI_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CIP_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CIP_SL_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="USER_NM" type="xs:string" minOccurs="0" />
+              <xs:element name="ENT_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="REMARKS" type="xs:string" minOccurs="0" />
+              <xs:element name="VALID" type="xs:string" minOccurs="0" />
+              <xs:element name="BALANCE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NET_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ENT_TM" type="xs:string" minOccurs="0" />
+              <xs:element name="CIP" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_FLAG" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_FLAG" type="xs:string" minOccurs="0" />
+              <xs:element name="DIVI_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CIP_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADDITIONAL_PAY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIVI_STATUS" type="xs:string" minOccurs="0" />
+              <xs:element name="WAR_DELEVARY" type="xs:string" minOccurs="0" />
+              <xs:element name="WAR_DELEVARY_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WAR_BK_PAY" type="xs:string" minOccurs="0" />
+              <xs:element name="WAR_BK_PAY_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ID_BK_BR_NM_CD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BK_AC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_NM_CD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BK_BR_NM_CD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IS_BEFTN" type="xs:string" minOccurs="0" />
+              <xs:element name="IS_BEFTN_SUCCS" type="xs:string" minOccurs="0" />
+              <xs:element name="BEFTN_CREDIT_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BEFTN_RETURN_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BANK_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

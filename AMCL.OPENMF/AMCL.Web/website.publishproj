@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+WARNING: DO NOT MODIFY this file, it is used for the web publish process.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7a38b6fd-8448-48d3-aaea-d02a0a609cbd}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/AMCL.Web</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebMetabasePath>
+    </SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AMCL.BL\AMCL.BL.csproj">
+      <Project>{4F96C1C9-9CF1-4210-B575-2DE6107E0F45}</Project>
+      <Name>AMCL.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AMCL.COMMON\AMCL.COMMON.csproj">
+      <Project>{AF26967C-8915-4DC0-AEC6-45663F53AA5F}</Project>
+      <Name>AMCL.COMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AMCL.DL\AMCL.DL.csproj">
+      <Project>{7C1DF182-DA94-4C31-868F-34DC8CFBDBAD}</Project>
+      <Name>AMCL.DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AMCL.GATEWAY\AMCL.GATEWAY.csproj">
+      <Project>{8728AD3D-51E9-486A-B0C5-6FB63CA8FB1A}</Project>
+      <Name>AMCL.GATEWAY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AMCL.REPORT\AMCL.REPORT.csproj">
+      <Project>{853315DF-FAC1-455D-A34A-6D2DE32F0863}</Project>
+      <Name>AMCL.REPORT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AMCL.UTILITY\AMCL.UTILITY.csproj">
+      <Project>{3FD358FA-4C65-416D-A7B3-8F68CE37EA94}</Project>
+      <Name>AMCL.UTILITY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

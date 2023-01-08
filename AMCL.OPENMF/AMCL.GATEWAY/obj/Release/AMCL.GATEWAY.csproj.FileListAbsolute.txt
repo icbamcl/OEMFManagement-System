@@ -1,0 +1,5 @@
+D:\Project\Web\AMCL.OPENMF\AMCL.GATEWAY\bin\Release\AMCL.GATEWAY.dll
+D:\Project\Web\AMCL.OPENMF\AMCL.GATEWAY\bin\Release\AMCL.GATEWAY.pdb
+D:\Project\Web\AMCL.OPENMF\AMCL.GATEWAY\obj\Release\ResolveAssemblyReference.cache
+D:\Project\Web\AMCL.OPENMF\AMCL.GATEWAY\obj\Release\AMCL.GATEWAY.dll
+D:\Project\Web\AMCL.OPENMF\AMCL.GATEWAY\obj\Release\AMCL.GATEWAY.pdb

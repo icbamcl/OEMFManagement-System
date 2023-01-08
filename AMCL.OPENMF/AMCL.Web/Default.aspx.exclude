@@ -1,0 +1,226 @@
+﻿<%@Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" Title="ICB Asset Management Compnay Limited Login Page (Design and Developed by Sakhawat)" %>
+<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Price Board of Open-End Mutual Fund </title>
+    <style type="text/css">
+        BODY {
+				    margin-left:0px;
+	                margin-top: 0px;
+	                margin-right: 0px;
+	                margin-bottom: 0px;	
+	                /*background-color:#D7D7FF;*/
+	               /*  Background-color: #DFDFF0;*/
+	               /* background-image: url(../images/bg_logo.gif);*/
+	               /* background-repeat: repeat-x repeat-y;*/
+	                font-family: Verdana; 	
+	                FONT-SIZE: 11px; 	
+	                font-weight: normal; 
+	                COLOR: #465360; 	
+	                text-align: left;
+	                vertical-align: top;
+            }
+        .tr
+        {
+                    margin-left:0px;
+	                margin-top: 0px;
+	                margin-right: 0px;
+	                margin-bottom: 0px;	
+        }
+          .marquee {
+                width: 100%;
+                line-height: 50px;
+	          /* background-color: Pink;*/
+	            color: Black;
+                white-space: nowrap;
+                overflow: hidden;
+                box-sizing: border-box;
+                }
+            .marquee p {
+
+                display: inline-block;
+                padding-left: 100%;
+                animation: marquee 20s linear infinite;
+            }
+            @keyframes marquee {
+                0%   { transform: translate(0, 0); }
+                100% { transform: translate(-100%, 0); }
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width:100%">
+        &nbsp;<table style="width:100%"  >
+            <tr class="tr" >
+                <td class="tr">
+                    <p  style="text-align:center;font-size:40px; color:#330066; " class="tr"><b>ICB Asset Management Company Limited  </b></p>
+                    
+                </td>
+                
+            </tr>
+            <tr class="tr">
+                <td style="background-color:#330066;" class="tr">
+                    <p class="tr" style="text-align:center;font-size:30px; color:#FFFFFF"><b>Transaction Time: Sunday to Wednesday (10:00 AM to 2:30 PM) </b></p>
+                </td>
+            </tr>
+           <%-- <tr class="tr">
+                <td style="background-color:#AF4F9F;" >
+                    <p class="tr" style="text-align:center;font-size:30px; color:#FFFFFF"><b>Re-fixation Price of Open-End Mutual Fund (Per Unit)</b></font></p>
+                </td>
+            </tr>--%>
+            <tr  style="text-align:center;">
+                <td style="text-align:center;">
+                    <table>
+                        <tr style="text-align:center; background-color:#7DABDA; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px"><strong>Non-CDS Funds </strong></td>
+                            <td style="text-align:center; width:12%;font-size:20px""><strong>Effective From</strong></td>
+                            <td style="text-align:center; width:8%;font-size:20px""><strong>Sale 
+                                <br />
+                                Price<br />
+                                (Tk.)</strong></td>
+                            <td style="text-align:center; width:10%;font-size:20px""><strong>Re-Purchase Price(Tk.) </strong> </td>
+                            <td  style="text-align:center; width:20%; font-size:20px"><strong>CDS Funds </strong></td>
+                            <td style="text-align:center; width:12%;font-size:20px""><strong>Effective From</strong></td>
+                            <td style="text-align:center; width:08%;font-size:20px""><strong>Sale 
+                                <br />
+                                Price<br />
+                                (Tk.)</strong></td>
+                            <td style="text-align:center; width:10%;font-size:20px""><strong>Re-Purchase Price(Tk.)</strong></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color:#D5E0E6; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:blue"><strong>IAMCL Unit Fund</strong></td>
+                            <td id="IAMCL_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="IAMCL_SALE" runat="server" style="text-align:center; width:8%;font-size:20px ; font-weight:bold"></td>
+                            <td id="IAMCL_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:#8C77D3 ; font-weight:bold"> ICB1 Unit Fund</td>
+                            <td id="ICB1_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td  id="ICB1_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB1_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color: lightblue; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:#008B8B"><strong>&nbsp;Pension Hold. UF</strong></td>
+                            <td id="IAMPH_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="IAMPH_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="IAMPH_REP" runat="server"  style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:#008B8B"><strong>&nbsp;ICB2 Unit Fund</strong></td>
+                            <td id="ICB2_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB2_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB2_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color:#D5E0E6; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:green;"><strong>Bangladesh Fund</strong></td>
+                            <td id="BDF_DATE" runat="server" style="text-align:center; width:12%; font-size:20px ; font-weight:bold"></td>
+                            <td id="BDF_SALE" runat="server" style="text-align:center; width:8%; font-size:20px; font-weight:bold"></td>
+                            <td id="BDF_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color: forestgreen"><strong>&nbsp; ICB3 Unit Fund </strong> </td>
+                            <td id="ICB3_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB3_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB3_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color: lightblue; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:blue"><strong>&nbsp;Converted 1st UF</strong></td>
+                            <td id="CFUF_DATE" runat="server" style="text-align:center; width:12%;font-size:20px ; font-weight:bold"></td>
+                            <td id="CFUF_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="CFUF_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:blue "><strong>&nbsp;ICB4 Unit Fund </strong> </td>
+                            <td id="ICB4_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB4_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB4_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color:#D5E0E6; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:#CC9900"><strong>IAMCL Islamic UF</strong></td>
+                            <td id="IUF_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="IUF_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="IUF_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:#8C77D3;"><strong>&nbsp;ICB5 Unit Fund </strong> </td>
+                            <td  id="ICB5_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB5_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB5_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color: lightblue; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:#ff6600">&nbsp;</td>
+                            <td style="text-align:center; width:12%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:8%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:10%;font-size:20px">&nbsp;</td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:#008B8B"><strong>&nbsp;ICB6 Unit Fund</strong></td>
+                            <td   id="ICB6_DATE" runat="server"  style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB6_SALE" runat="server"  style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB6_REP" runat="server"  style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color:#D5E0E6; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:green">&nbsp;</td>
+                            <td style="text-align:center; width:12%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:8%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:10%;font-size:20px">&nbsp;</td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:forestgreen "><strong>&nbsp; ICB7 Unit Fund </strong> </td>
+                            <td  id="ICB7_DATE" runat="server" style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB7_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="ICB7_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                        <tr style="text-align:center; background-color: lightblue; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:#669900">&nbsp;</td>
+                            <td style="text-align:center; width:12%;font-size:20px; font-weight:bold">&nbsp;</td>
+                            <td style="text-align:center; width:8%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:10%;font-size:20px">&nbsp;</td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color: blue"><strong>&nbsp;ICB8 Unit Fund </strong> </td>
+                            <td   id="ICB8_DATE" runat="server"  style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td  id="ICB8_SALE" runat="server" style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td  id="ICB8_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                         <tr style="text-align:center; background-color: lightblue; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:#669900">&nbsp;</td>
+                            <td style="text-align:center; width:12%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:8%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:10%;font-size:20px">&nbsp;</td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:#8C77D3"><strong>&nbsp;Second NRB UF</strong></td>
+                            <td  id="INRB2_DATE" runat="server"  style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="INRB2_SALE" runat="server"  style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td id="INRB2_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+						 <tr style="text-align:center; background-color: lightblue; vertical-align:middle;">
+                            <td  style="text-align:center; width:20%; font-size:20px; color:#669900">&nbsp;</td>
+                            <td style="text-align:center; width:12%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:8%;font-size:20px">&nbsp;</td>
+                            <td style="text-align:center; width:10%;font-size:20px">&nbsp;</td>
+
+                            <td  style="text-align:center; width:20%; font-size:20px ; color:forestgreen"><strong>&nbsp;Shotoborsho UF</strong></td>
+                            <td  id="IASUF_DATE" runat="server"  style="text-align:center; width:12%;font-size:20px; font-weight:bold"></td>
+                            <td id="IASUF_SALE" runat="server"  style="text-align:center; width:8%;font-size:20px; font-weight:bold"></td>
+                            <td  id="IASUF_REP" runat="server" style="text-align:center; width:10%;font-size:20px; font-weight:bold"></td>                            
+                        </tr>
+                     <%--  <tr style="text-align:center; background-color: white; vertical-align:middle;">
+                            <td   colspan="8">
+                                  <%--<marquee runat="server" behavior="alternate"><p align="center"><font size="6" color="#330066">
+	                               <b> **Unit Holders' are requested to collect the CIP Unit Certificate(s) and update their profile.</b></font></p>
+                                 </marquee>
+                                <p align="center">
+                                    <font size="5" color="#330066">
+	                                    <b> **Unit Holders' are requested to collect the CIP Unit Certificate(s) and update their profile.</b>
+                                    </font>
+                                </p>
+                                </td>
+                               </tr>  --%>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    
+
+    </div>
+    </form>
+</body>
+</html>

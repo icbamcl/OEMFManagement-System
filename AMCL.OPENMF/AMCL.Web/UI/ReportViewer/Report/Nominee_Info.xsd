@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Nominee_Info" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Nominee_Info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REG_BK" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BR" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOMI_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOMI_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_FMH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_OCC_CODE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOMI_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_REL" type="xs:string" minOccurs="0" />
+              <xs:element name="PERCENTAGE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOMI_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="REAMARKS" type="xs:string" minOccurs="0" />
+              <xs:element name="VALID" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_NATIONALITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_CTL_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_MO_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_IS_MINOR" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_BIRTH_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOMI_GARDIAN_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_GARDIAN_ADDRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI_GARDIAN_BIRTH_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GARD_REL_WITH_NOMI" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UnitCommon.master.cs" Inherits="UI_AMCLCommon"%>
+<%@ Register Assembly="skmMenu" Namespace="skmMenu" TagPrefix="cc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <title>Design and Developed by Md. Sakhawat Hossain</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="Stylesheet" type="text/css" href="../CSS/amcl.css" />
+    <script type="text/javascript" src="JavaScript/jquery-1.11.0.js"></script>
+    <style type="text/css">
+       
+        A.TextLink:hover
+        {
+	        COLOR: #556677; 
+	        font-weight:bold; 
+	        font-size:large;
+	        text-decoration:underline;	       
+	        
+        	
+        }
+        
+        .styleFooter
+        {
+            color: #990033;
+        }
+       
+       .body {
+	                margin-left:0px;
+	                margin-top: 0px;
+	                margin-right: 0px;
+	                margin-bottom: 0px;	
+	                background-color:#D7D7FF;
+	                /*Background-color: #DFDFF0;	*/
+	               /* background-image: url(../images/bg_logo.gif);*/
+	               /* background-repeat: repeat-x repeat-y;*/
+	                font-family: Verdana; 	
+	                FONT-SIZE: 11px; 	
+	                font-weight: normal; 
+	                COLOR: #465360; 	
+	                text-align: left;
+	                vertical-align: top;
+                }
+             .Submenu
+             {
+             	margin:top 25px;
+             }
+        
+        .auto-style1 {
+            width: 806px;
+        }
+        
+        </style>
+</head>
+<body onkeydown="if (event.keyCode==13) {event.keyCode=9; return event.keyCode }" >
+    <form id="form1" runat="server" method="post"  cellpadding="0" cellspacing="0">
+    <table  align="center" cellpadding="0" cellspacing="0" style="width:100%">
+   
+   
+     <tr>
+        <td ID="td1" runat="server" colspan="2" align="center"  style="background-color:#CCCCCC; color: #3399FF; font-size: medium;font-weight: bold;font-family:Times, serif;">           
+           IAMCL TradeUnits         
+            </td>
+    </tr>
+     <tr>
+        <td ID="tdFundName" height="30px" runat="server" style="background-color:#CCCCCC; font-size: x-large;font-weight: bold;" colspan="2" align="center" >                                       
+        </td>
+    </tr>
+    <tr>
+        <td ID="tdUser" runat="server" style="background-color:#CCCCCC;" 
+            align="center" class="auto-style1">
+           
+        </td>
+         <td ID="tdBranch" runat="server" style="background-color:#CCCCCC; " 
+            align="left">
+           
+        </td>
+    </tr>
+	<tr class="topbgcolor">
+	    <td align="left">
+	    <cc2:Menu id="mnuMenu" Layout="Horizontal" runat="server" Cursor="Pointer" Submenucssclass="Submenu">
+				<UNSELECTEDMENUITEMSTYLE CssClass="ItemUnSelected"></UNSELECTEDMENUITEMSTYLE>
+				<SELECTEDMENUITEMSTYLE CssClass="ItemSelected"></SELECTEDMENUITEMSTYLE>
+			</cc2:Menu>
+	    </td>
+	     <td align="right">
+	    <cc2:Menu id="mnuMenu1" Layout="Horizontal" runat="server" Cursor="Pointer" Submenucssclass="Submenu">
+				<UNSELECTEDMENUITEMSTYLE CssClass="ItemUnSelected"></UNSELECTEDMENUITEMSTYLE>
+				<SELECTEDMENUITEMSTYLE CssClass="ItemSelected"></SELECTEDMENUITEMSTYLE>
+			</cc2:Menu>
+	    </td>
+	  </tr>
+    </table>
+    <table  align="center" cellpadding="0" cellspacing="0" style="width:100%">
+      <tr>
+        <td align="center">        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+           <br />       
+           <br />    
+           <br />    
+           <br />    
+           <br />    
+           <br />    
+          
+           <br />    
+           <br />    
+        </asp:ContentPlaceHolder>
+        </td>
+      </tr>
+    </table>   
+    <table  align="center" cellpadding="0" cellspacing="0" style="width: 100%">
+            
+        <tr>  
+         <td align="left" class="styleFooter" >
+             Design & Developed by Md. Sakhawat Hossain. </td>   
+        <td align="right" class="styleFooter" >
+            Copyright ICB Asset Management Company Ltd. 2011-2014
+        </td>
+        </tr>
+    </table>
+   
+    </form>
+</body>
+</html>

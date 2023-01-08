@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ReportLetter" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportLetter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REGI_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="WAR_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="HNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BK" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_BR" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_NO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BK_NM_CD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BK_BR_NM_CD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BK_AC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="FY" type="xs:string" minOccurs="0" />
+              <xs:element name="CLOSE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TOT_DIVI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIDUCT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FI_DIVI_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CIP_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BALANCE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BK_FLAG" type="xs:string" minOccurs="0" />
+              <xs:element name="CIP_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIVI_RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BANK_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_POST_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_DISTRICT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

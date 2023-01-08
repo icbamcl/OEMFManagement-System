@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="ReportStatement" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportStatement">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SL_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="SL_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="HNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI1_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMI2_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JNT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="CITY" type="xs:string" minOccurs="0" />
+              <xs:element name="REG_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BK_AC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="BANK_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH_ADDRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="CERT_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="RATE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CIP" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_AC" type="xs:string" minOccurs="0" />
+              <xs:element name="SL_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="TIN" type="xs:string" minOccurs="0" />
+              <xs:element name="BO" type="xs:string" minOccurs="0" />
+              <xs:element name="NID" type="xs:string" minOccurs="0" />
+              <xs:element name="MONY_RECT_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="CERT_RCV_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="CERT_DLVRY_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="REP_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="REP_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="PAY_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="SL_TR_REP_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="OLD_SL_TR_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="TR_NO" type="xs:int" minOccurs="0" />
+              <xs:element name="TR_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="TFEREE_REG_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="TFEREE_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="TFEREE_JNT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="TFEREE_ADDRS1" type="xs:string" minOccurs="0" />
+              <xs:element name="TFEREE_ADDRS2" type="xs:string" minOccurs="0" />
+              <xs:element name="TFEREE_CITY" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

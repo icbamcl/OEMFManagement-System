@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AMCL.BL.UnitCertBookInfoBL" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABACAAAAAAAEAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>UnitCertBookInfoBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitHolderRegBL" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAgABAAAAAEAFAIAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UnitHolderRegBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitRenewalBL" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAABAAAAAAgAAAAABAAAAAAAAAAAABAAACAA=</HashCode>
+      <FileName>UnitRenewalBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitReport" Collapsed="true">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAoAACBEAAIAAAAAQAIAADAEAAQAAEBAIAAACAA=</HashCode>
+      <FileName>UnitReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitRepurchaseBL" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABABAAAAAAAAAAAQABAAAAABAwABAAAAAAAA=</HashCode>
+      <FileName>UnitRepurchaseBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitSaleBL" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABACBAAAAAAgAAAAABAAAAAAAIAAAAJBAACAA=</HashCode>
+      <FileName>UnitSaleBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitTransferBL" Collapsed="true">
+    <Position X="2" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgBgAAAAAAAAAAAAAAAAAAAAAABABEAAAAg=</HashCode>
+      <FileName>UnitTransferBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitUserBL" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAgAAAABAAAAIAAAAAAAAEAAAAAAAAADAAAAAACA=</HashCode>
+      <FileName>UnitUserBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AMCL.BL.UnitLienBl">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UnitLienBl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

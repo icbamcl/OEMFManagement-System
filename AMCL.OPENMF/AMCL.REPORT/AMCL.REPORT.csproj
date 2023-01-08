@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{853315DF-FAC1-455D-A34A-6D2DE32F0863}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMCL.REPORT</RootNamespace>
+    <AssemblyName>AMCL.REPORT</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BotDetect, Version=4.2.0.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.2.0\lib\net35\BotDetect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BotDetect.Web.Mvc, Version=4.2.0.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.2.0\lib\net35\BotDetect.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AMCL.Web\Bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AMCL.Web\Bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AMCL.Web\Bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Copy of CR_BDFDividendWarrantPrint.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Copy of CR_BDFDividendWarrantPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_CHQPrint.cs">
+      <DependentUpon>CR_CHQPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_CHQPrint11.cs">
+      <DependentUpon>CR_CHQPrint11.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_BEFTNAdviceLetterIFIC.cs">
+      <DependentUpon>CR_BEFTNAdviceLetterIFIC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_DemateREP_TR.cs">
+      <DependentUpon>CR_DemateREP_TR.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_DemateSALE_TR.cs">
+      <DependentUpon>CR_DemateSALE_TR.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_DemateDRF.cs">
+      <DependentUpon>CR_DemateDRF.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_MoneyReceiptRepurchase.cs">
+      <DependentUpon>CR_MoneyReceiptRepurchase.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_MoneyReceiptSale.cs">
+      <DependentUpon>CR_MoneyReceiptSale.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SIPAutoDebitForm.cs">
+      <DependentUpon>CR_SIPAutoDebitForm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SIPAckReceipt.cs">
+      <DependentUpon>CR_SIPAckReceipt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SIPIndividualSchedule.cs">
+      <DependentUpon>CR_SIPIndividualSchedule.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SIPStatementAfterSale.cs">
+      <DependentUpon>CR_SIPStatementAfterSale.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SIP_EFT_SHAHJALAL.cs">
+      <DependentUpon>CR_SIP_EFT_SHAHJALAL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SIP_EFT.cs">
+      <DependentUpon>CR_SIP_EFT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SMS - Copy.cs">
+      <DependentUpon>CR_SMS - Copy.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitFundPositionHolder.cs">
+      <DependentUpon>CR_UnitFundPositionHolder.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitFundPositionSummary.cs">
+      <DependentUpon>CR_UnitFundPositionSummary.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitReportRegistrationForBranch.cs">
+      <DependentUpon>CR_UnitReportRegistrationForBranch.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_IUFCIPCertPrint.cs">
+      <DependentUpon>CR_IUFCIPCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_PenDividendWarrantPrint.cs">
+      <DependentUpon>CR_PenDividendWarrantPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitCIPSCRIPTCertPrint.cs">
+      <DependentUpon>CR_UnitCIPSCRIPTCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitCIPCertPrint.cs">
+      <DependentUpon>CR_UnitCIPCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_AddressLetter.cs">
+      <DependentUpon>CR_AddressLetter.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitDividendTaxDeductList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitDividendTaxDeductList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitIntimationLetter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitIntimationLetter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitIntimationLetter111.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitIntimationLetter111.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitRepurchaseStatementSummary.cs">
+      <DependentUpon>CR_UnitRepurchaseStatementSummary.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitSaleCertPrint.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitSaleCertPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_SIPStatement.cs">
+      <DependentUpon>CR_SIPStatement.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitRegistrationInfo.cs">
+      <DependentUpon>CR_UnitRegistrationInfo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitRegInfo.cs">
+      <DependentUpon>CR_UnitRegInfo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitSaleStatement.cs">
+      <DependentUpon>CR_UnitSaleStatement.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitFundPosition.cs">
+      <DependentUpon>CR_UnitFundPosition.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitTaxStatementAcc.cs">
+      <DependentUpon>CR_UnitTaxStatementAcc.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_CFUFCIPCertPrint.cs">
+      <DependentUpon>CR_CFUFCIPCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_BDFDividendWarrantPrint.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BDFDividendWarrantPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_BDFDividendWarrantPrintIntirim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BDFDividendWarrantPrintIntirim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_CFUFSaleCertPrint.cs">
+      <DependentUpon>CR_CFUFSaleCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_CertProcessr.cs">
+      <DependentUpon>CR_CertProcessr.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_LienLetter.cs">
+      <DependentUpon>CR_LienLetter.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_PriceRefixationAllFundLast.cs">
+      <DependentUpon>CR_PriceRefixationAllFundLast.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_BDFSaleCertPrint.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BDFSaleCertPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_BDFTransCertPrint.cs">
+      <DependentUpon>CR_BDFTransCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_SendingDividendBankLetter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_SendingDividendBankLetter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitStatementOfficeID.cs">
+      <DependentUpon>CR_UnitStatementOfficeID.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitStatementCIPSign.cs">
+      <DependentUpon>CR_UnitStatementCIPSign.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitStatementOffice.cs">
+      <DependentUpon>CR_UnitStatementOffice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitStatementBank.cs">
+      <DependentUpon>CR_UnitStatementBank.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitStatementCashSign.cs">
+      <DependentUpon>CR_UnitStatementCashSign.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitStatementAfterClosing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitStatementAfterClosing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitTransCertPrint11.cs">
+      <DependentUpon>CR_UnitTransCertPrint11.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitTransCertPrint.cs">
+      <DependentUpon>CR_UnitTransCertPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_UnitDividendWarrantPrint.cs">
+      <DependentUpon>CR_UnitDividendWarrantPrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_PenDividendWarrantPrint1111.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_PenDividendWarrantPrint1111.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CR_UnitCurrentHoldingSoventCert.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitCurrentHoldingSoventCert.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitSaleLedger.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitSaleLedger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitSaleStatementCDS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitSaleStatementCDS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptIncomeTax.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIncomeTax.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptIncomeTaxFinal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIncomeTaxFinal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptInvestCert.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvestCert.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptInvestCertCIP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvestCertCIP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitLedgerStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitLedgerStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitRepurchaseStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitRepurchaseStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_UnitRepurchaseVoucher.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_UnitRepurchaseVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSolventCert.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSolventCert.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSurrenderCert.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSurrenderCert.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTransStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTransStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_SMS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_SMS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XMLSCHEMAS\CR_SendingDividendBankLetter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_SendingDividendBankLetter.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Copy of CR_BDFDividendWarrantPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of CR_BDFDividendWarrantPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_CHQPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_CHQPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_CHQPrint11.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_CHQPrint11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_BEFTNAdviceLetterIFIC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BEFTNAdviceLetterIFIC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_DemateREP_TR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_DemateREP_TR.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_DemateSALE_TR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_DemateSALE_TR1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_DemateDRF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_DemateDRF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_MoneyReceiptRepurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_MoneyReceiptRepurchase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_MoneyReceiptSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_MoneyReceiptSale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIPAutoDebitForm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIPAutoDebitForm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIPAckReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIPAckReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIPIndividualSchedule.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIPIndividualSchedule.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIPStatementAfterSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIPStatementAfterSale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIP_EFT_SHAHJALAL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIP_EFT_SHAHJALAL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIP_EFT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIP_EFT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SMS - Copy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SMS - Copy.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitFundPositionHolder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitFundPositionHolder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitFundPositionSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitFundPositionSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitReportRegistrationForBranch.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitReportRegistrationForBranch.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitDividendTaxDeductList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitDividendTaxDeductList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_IUFCIPCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_IUFCIPCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_PenDividendWarrantPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_PenDividendWarrantPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitCIPSCRIPTCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitCIPSCRIPTCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitCIPCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitCIPCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_AddressLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_AddressLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitIntimationLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitIntimationLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitRepurchaseStatementSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitRepurchaseStatementSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitSaleCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitSaleCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SIPStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SIPStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitRegistrationInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitRegistrationInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitRegInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitRegInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitSaleStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitSaleStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitFundPosition.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitFundPosition.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitTaxStatementAcc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitTaxStatementAcc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_CFUFCIPCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_CFUFCIPCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_BDFDividendWarrantPrintIntirim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BDFDividendWarrantPrintIntirim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_CFUFSaleCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_CFUFSaleCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_BDFDividendWarrantPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BDFDividendWarrantPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_CertProcessr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_CertProcessr.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_LienLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_LienLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_PriceRefixationAllFundLast.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_PriceRefixationAllFundLast.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_BDFSaleCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BDFSaleCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_BDFTransCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BDFTransCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SendingDividendBankLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SendingDividendBankLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitStatementOfficeID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitStatementOfficeID.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitStatementCIPSign.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitStatementCIPSign.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitStatementOffice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitStatementOffice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitStatementBank.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitStatementBank.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitStatementCashSign.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitStatementCashSign.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitStatementAfterClosing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitStatementAfterClosing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitTransCertPrint11.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitTransCertPrint11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitTransCertPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitTransCertPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitDividendWarrantPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitDividendWarrantPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_PenDividendWarrantPrint1111.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_PenDividendWarrantPrint1111.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitCurrentHoldingSoventCert.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitCurrentHoldingSoventCert.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitSaleLedger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitSaleLedger.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitIntimationLetter111.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitIntimationLetter111.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitSaleStatementCDS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitSaleStatementCDS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptIncomeTax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIncomeTax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptIncomeTaxFinal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIncomeTaxFinal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInvestCert.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvestCert.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptInvestCertCIP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvestCertCIP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitLedgerStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitLedgerStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitRepurchaseStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitRepurchaseStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_UnitRepurchaseVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_UnitRepurchaseVoucher.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSolventCert.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSolventCert.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSurrenderCert.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSurrenderCert.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTransStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTransStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_SMS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_SMS.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="XMLSCHEMAS\CR_SendingDividendBankLetter.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CR_SendingDividendBankLetter.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtIntimationLetter.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtIntimationLetter.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtLedgerForReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtLedgerForReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtMneyReceiptDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtMneyReceiptDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtMneyReceiptDetailsREP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtMneyReceiptDetailsREP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtPriceRefixation.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtPriceRefixation.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtReportIncomeTax.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtReportIncomeTax.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtRepurchaseBEFTNAdviceData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtRepurchaseBEFTNAdviceData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtSaleCertPrintReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtSaleCertPrintReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtTaxStatementAcc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtTaxStatementAcc.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtUnitDemateDRF.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUnitDemateDRF.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtUnitFundPosition.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUnitFundPosition.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtUnitFundPositionHolder.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUnitFundPositionHolder.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtUnitFundPositionSummary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUnitFundPositionSummary.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtUnitHolderStatementAfterClosing.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUnitHolderStatementAfterClosing.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\dtUnitReportForStatement.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUnitReportForStatement.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\ReportDividend.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDividend.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\ReportLienLetter.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportLienLetter.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\rptInvestCert.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rptInvestCert.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\rptSolventCert.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rptSolventCert.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSCHEMAS\rptSurrenderCert.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rptSurrenderCert.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AMCL.REPORT.dll" />
+    <Content Include="bin\Debug\AMCL.REPORT.pdb" />
+    <Content Include="bin\Release\AMCL.REPORT.dll" />
+    <Content Include="bin\Release\AMCL.REPORT.pdb" />
+    <Content Include="obj\Debug\AMCL.REPORT.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\AMCL.REPORT.dll" />
+    <Content Include="obj\Debug\AMCL.REPORT.pdb" />
+    <Content Include="obj\Debug\Refactor\AMCL.REPORT.dll" />
+    <Content Include="obj\Debug\TempPE\Copy of CR_UnitStatementBank.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_BDFSaleCertPrint.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_BDFTransCertPrint.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_CertProcessr.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_LienLetter.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_PenDividendWarrantPrint.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_PriceRefixation.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitCurrentHoldingSoventCert.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitDividendWarrantPrint.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitSaleCertPrint.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitStatementAfterClosing.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitStatementBank.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitStatementCashSign.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitStatementCIPSign.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitStatementOffice.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitStatementOfficeID.cs.dll" />
+    <Content Include="obj\Debug\TempPE\CR_UnitTransCertPrint.cs.dll" />
+    <Content Include="obj\Debug\TempPE\XMLSCHEMAS.dtPriceRefixation.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\XMLSCHEMAS.dtSaleCertPrintReport.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\XMLSCHEMAS.dtUnitHolderStatementAfterClosing.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\XMLSCHEMAS.ReportDividend.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\XMLSCHEMAS.ReportLienLetter.Designer.cs.dll" />
+    <Content Include="obj\Release\AMCL.REPORT.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\AMCL.REPORT.dll" />
+    <Content Include="obj\Release\AMCL.REPORT.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

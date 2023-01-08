@@ -1,0 +1,137 @@
+﻿using System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using AMCL.DL;
+using AMCL.BL;
+using AMCL.UTILITY;
+using AMCL.GATEWAY;
+using AMCL.COMMON;
+
+
+
+public partial class _Default : System.Web.UI.Page 
+{
+    CommonGateway commonGatewayObj = new CommonGateway();
+    EncryptDecrypt encrypt = new EncryptDecrypt();
+    OMFDAO opendMFDAO = new OMFDAO();
+    UnitReport reportObj = new UnitReport();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        DataTable dtFundInfoDetails = reportObj.dtFundInfoDetails("   ");
+        DataTable dtPriceDetails = dtPriceDetails = reportObj.dtPriceDetails(" AND FUND_CD='" + dtFundInfoDetails.Rows[0]["FUND_CD"].ToString().ToUpper() + "'  AND REFIX_DT=(SELECT MAX (REFIX_DT) FROM PRICE_REFIX WHERE FUND_CD='" + dtFundInfoDetails.Rows[0]["FUND_CD"].ToString().ToUpper() + "') ");
+        for (int looper = 1; looper < dtFundInfoDetails.Rows.Count; looper++)
+        {
+            DataTable dtprice = reportObj.dtPriceDetails(" AND FUND_CD='" + dtFundInfoDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() + "'  AND REFIX_DT=(SELECT MAX (REFIX_DT) FROM PRICE_REFIX WHERE FUND_CD='" + dtFundInfoDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() + "') ");
+            dtPriceDetails.Merge(dtprice);
+        }
+
+        if(dtPriceDetails.Rows.Count>0)
+        {
+            for (int looper = 0; looper < dtPriceDetails.Rows.Count; looper++)
+            {
+                if(dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper()=="IAMCL")
+                {
+                   IAMCL_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                   IAMCL_SALE.InnerText= dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                   IAMCL_REP.InnerText= dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "IAMPH")
+                {
+                    IAMPH_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    IAMPH_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    IAMPH_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "BDF")
+                {
+                    BDF_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    BDF_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    BDF_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "CFUF")
+                {
+                    CFUF_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    CFUF_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    CFUF_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "IUF")
+                {
+                    IUF_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    IUF_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    IUF_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB1")
+                {
+                    ICB1_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB1_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB1_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB2")
+                {
+                    ICB2_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB2_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB2_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB3")
+                {
+                    ICB3_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB3_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB3_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB4")
+                {
+                    ICB4_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB4_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB4_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB5")
+                {
+                    ICB5_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB5_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB5_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB6")
+                {
+                    ICB6_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB6_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB6_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB7")
+                {
+                    ICB7_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB7_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB7_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "ICB8")
+                {
+                    ICB8_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    ICB8_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    ICB8_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "INRB2")
+                {
+                    INRB2_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    INRB2_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    INRB2_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+                else if (dtPriceDetails.Rows[looper]["FUND_CD"].ToString().ToUpper() == "IASUF")
+                {
+                    IASUF_DATE.InnerText = dtPriceDetails.Rows[looper]["EFFECTIVE_DT"].ToString();
+                    IASUF_SALE.InnerText = dtPriceDetails.Rows[looper]["REFIX_SL_PR"].ToString();
+                    IASUF_REP.InnerText = dtPriceDetails.Rows[looper]["REFIX_REP_PR"].ToString();
+                }
+
+            }
+        }
+    }
+  
+  
+}
